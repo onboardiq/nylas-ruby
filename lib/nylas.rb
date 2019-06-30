@@ -148,7 +148,7 @@ module Nylas
         :client_id => @app_id,
         :trial => options.fetch(:trial, false),
         :response_type => 'code',
-        :scope => 'email',
+        :scope => (options[:scope] || 'email'),
         :login_hint => login_hint,
         :redirect_uri => redirect_uri,
       }
